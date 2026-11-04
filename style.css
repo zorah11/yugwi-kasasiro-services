@@ -399,3 +399,36 @@
     outline-offset: 2px;
   }
 }
+
+/* Keep the mobile menu above the page without shifting its content. */
+.yugwi-header { z-index: 20; }
+.yugwi-header .nav:focus-within { outline: none; }
+@media (max-width: 820px) {
+  .has-mobile-menu .yugwi-header .nav { position: relative; }
+  .has-mobile-menu .yugwi-header .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 5;
+    display: none;
+    grid-column: auto;
+    gap: 0;
+    margin: 0;
+    padding: 6px 0;
+    background: #f5f2e9;
+    border: 1px solid #c8cbba;
+    box-shadow: 0 12px 24px rgba(39, 41, 34, .16);
+  }
+  .has-mobile-menu .menu-toggle[aria-expanded="true"] + .nav-links { display: grid; }
+  .has-mobile-menu .yugwi-header .nav-links a {
+    min-height: 48px;
+    padding: 0 14px;
+    border-bottom: 1px solid rgba(54, 70, 49, .1);
+  }
+  .has-mobile-menu .yugwi-header .nav-links a:last-child { border-bottom: 0; }
+  .yugwi-header .menu-toggle:focus-visible {
+    outline: 2px solid #61704d;
+    outline-offset: 2px;
+  }
+}
