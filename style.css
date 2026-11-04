@@ -210,16 +210,16 @@
 }
 
 .collection-services .service-list {
-  gap: 0 24px;
+  gap: 16px;
   margin-top: 12px;
 }
 
 .collection-services .service-card {
-  min-height: 0;
-  padding: 16px 0;
-  background: none;
-  border: 0;
-  border-top: 1px solid var(--pickup-border);
+  min-height: 146px;
+  padding: clamp(18px, 2.5vw, 30px);
+  background: #fffdf7;
+  border: 1px solid var(--pickup-border);
+  border-top: 4px solid var(--moss);
   box-shadow: none;
   backdrop-filter: none;
 }
@@ -264,5 +264,74 @@
   .collection-choices label {
     gap: 4px;
     padding-inline: 5px;
+  }
+}
+
+
+.about-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, .95fr);
+  align-items: stretch;
+  gap: clamp(20px, 4vw, 58px);
+  padding: clamp(30px, 6vw, 85px) 0;
+}
+
+.about-copy {
+  align-self: center;
+}
+
+.about-copy .label {
+  color: #815238;
+}
+
+.about-copy h1 {
+  margin: 12px 0 16px;
+  color: #364631;
+  font: 400 clamp(2.75rem, 5.6vw, 5.6rem)/.98 var(--display);
+  letter-spacing: -.045em;
+}
+
+.about-copy p:not(.label),
+.about-approach p {
+  max-width: 57ch;
+  color: var(--muted);
+}
+
+.about-intro img {
+  min-height: 310px;
+  max-height: 530px;
+  object-position: 57% center;
+}
+
+.about-approach {
+  margin-bottom: clamp(30px, 6vw, 78px);
+  padding: clamp(24px, 4vw, 44px);
+  background: #e8ddc8;
+}
+
+.about-approach h2 {
+  margin: 0;
+  color: #364631;
+  font: 400 clamp(1.8rem, 3.5vw, 3rem)/1 var(--display);
+}
+
+.about-approach a {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  min-height: 44px;
+  font-weight: 700;
+  text-underline-offset: 4px;
+}
+
+@media (max-width: 820px) {
+  .about-intro {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .about-intro img {
+    min-height: 0;
+    height: auto;
+    aspect-ratio: 16 / 10;
   }
 }
