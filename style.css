@@ -335,3 +335,67 @@
     aspect-ratio: 16 / 10;
   }
 }
+
+.menu-toggle { display: none; }
+
+.collection-section {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: clamp(32px, 6vw, 72px) 18px;
+  background: #e8ddc8;
+}
+
+.collection-copy {
+  max-width: 700px;
+  margin: auto;
+  padding: 0;
+  border: 0;
+  background: none;
+}
+
+@media (max-width: 820px) {
+  .has-mobile-menu .yugwi-header .nav {
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 0;
+  }
+
+  .has-mobile-menu .yugwi-header .brand { grid-column: 1; }
+  .has-mobile-menu .yugwi-header .nav-contact { display: none; }
+
+  .has-mobile-menu .menu-toggle {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: 1px solid #c8cbba;
+    background: #fffdf7;
+    color: #364631;
+    cursor: pointer;
+  }
+
+  .menu-toggle span {
+    width: 18px;
+    height: 2px;
+    background: currentColor;
+    box-shadow: 0 -5px currentColor, 0 5px currentColor;
+  }
+
+  .has-mobile-menu .yugwi-header .nav-links {
+    display: none;
+    grid-column: 1 / -1;
+  }
+
+  .has-mobile-menu .menu-toggle[aria-expanded="true"] + .nav-links {
+    display: grid;
+    gap: 0;
+    margin-top: 8px;
+    border-top: 1px solid #c8cbba;
+  }
+
+  .yugwi-header .menu-toggle:focus-visible {
+    outline: 3px solid var(--rust);
+    outline-offset: 2px;
+  }
+}
