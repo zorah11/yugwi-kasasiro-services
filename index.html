@@ -6,11 +6,11 @@
   <meta name="theme-color" content="#272922">
   <title>Request a waste collection | Yugwi Kasasiro Services</title>
   <meta name="description" content="Plan a household or business waste collection with Yugwi Kasasiro Services.">
-  <link rel="stylesheet" href="style.css?v=6a47283">
+  <link rel="stylesheet" href="style.css?v=photo-home-2">
   <script src="collection.js" defer></script>
 </head>
 <body class="collection-home">
-  <header class="site-header">
+  <header class="site-header yugwi-header">
     <div class="wrap nav">
       <a class="brand" href="index.html"><span>Y</span>ugwi Kasasiro Services</a>
       <nav class="nav-links" aria-label="Main navigation">
@@ -24,10 +24,18 @@
   </header>
 
   <main>
-    <section class="wrap collection-hero" id="collection" aria-labelledby="collection-heading">
+    <section class="hero pickup-hero" aria-labelledby="home-heading">
+      <img src="images/hero.jpg" alt="Illustration of a community team sorting reusable materials" fetchpriority="high">
+      <div class="hero-copy wrap">
+        <p class="eyebrow">Waste collection for homes and businesses</p>
+        <h1 id="home-heading">A cleaner day begins at your <em>doorstep.</em></h1>
+        <a class="link-button" href="#collection">Request a collection <span aria-hidden="true">&darr;</span></a>
+      </div>
+    </section>
+
+    <section class="wrap collection-section" id="collection" aria-labelledby="collection-heading">
       <div class="collection-copy">
-        <p class="eyebrow">Waste pickup for homes and businesses</p>
-        <h1 id="collection-heading">Request a waste collection</h1>
+        <h2 id="collection-heading">Request a waste collection</h2>
 
         <form id="collection-form" aria-describedby="preview-note">
           <label for="area">Where is the pickup?</label>
@@ -55,10 +63,6 @@
           <p id="request-preview" role="status"></p>
         </form>
       </div>
-
-      <figure class="collection-photo">
-        <img src="images/hero.jpg" alt="Illustration of a community team sorting reusable materials">
-      </figure>
     </section>
 
     <section class="section collection-services">
