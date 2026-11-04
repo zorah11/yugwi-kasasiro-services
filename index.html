@@ -24,39 +24,35 @@
   </header>
 
   <main>
-    <section class="collection-hero" id="collection" aria-labelledby="collection-heading">
+    <section class="wrap collection-hero" id="collection" aria-labelledby="collection-heading">
       <div class="collection-copy">
-        <p class="eyebrow">Yugwi Kasasiro Services</p>
+        <p class="eyebrow">Waste pickup for homes and businesses</p>
         <h1 id="collection-heading">Request a waste collection</h1>
-        <p>Tell us where and what you need collected.</p>
 
         <form id="collection-form" aria-describedby="preview-note">
-          <label for="area">Pickup neighbourhood</label>
-          <input id="area" name="area" required maxlength="100" placeholder="e.g. Ntinda">
+          <label for="area">Where is the pickup?</label>
+          <input id="area" name="area" required maxlength="100" placeholder="Neighbourhood, e.g. Ntinda">
 
-          <div class="collection-fields">
-            <div>
-              <label for="service">Collection type</label>
-              <select id="service" name="service" required>
-                <option value="">Choose a service</option>
-                <option>Household collection</option>
-                <option>Business collection</option>
-                <option>Site cleanup</option>
-              </select>
+          <fieldset class="collection-options">
+            <legend>What do you need?</legend>
+            <div class="collection-choices">
+              <label><input type="radio" name="service" value="Household collection" required> Home</label>
+              <label><input type="radio" name="service" value="Business collection"> Business</label>
+              <label><input type="radio" name="service" value="Site cleanup"> Site cleanup</label>
             </div>
-            <div>
-              <label for="frequency">How often?</label>
-              <select id="frequency" name="frequency" required>
-                <option value="">Choose a frequency</option>
-                <option>One-time pickup</option>
-                <option>Regular collection</option>
-              </select>
+          </fieldset>
+
+          <fieldset class="collection-options">
+            <legend>How often?</legend>
+            <div class="collection-choices">
+              <label><input type="radio" name="frequency" value="One-time pickup" required> One-time pickup</label>
+              <label><input type="radio" name="frequency" value="Regular collection"> Regular pickup</label>
             </div>
-          </div>
+          </fieldset>
 
           <button type="submit" disabled>Preview collection request <span aria-hidden="true">&rarr;</span></button>
-          <p id="preview-note">Website demo. Your details stay on this page.</p>
-          <p id="request-preview" role="status" aria-live="polite"></p>
+          <p id="preview-note">Demo form. Details stay on this page.</p>
+          <p id="request-preview" role="status"></p>
         </form>
       </div>
 
@@ -67,13 +63,12 @@
 
     <section class="section collection-services">
       <div class="wrap">
-        <h2>Collection and sorting services</h2>
+        <div class="collection-services-heading"><h2>Collection and sorting services</h2><a href="services.html">View all services <span aria-hidden="true">&rarr;</span></a></div>
         <div class="service-list">
           <article class="service-card"><h3>Household collection</h3><p>Pickup for homes, compounds and shared residential spaces.</p></article>
           <article class="service-card"><h3>Business cleanup</h3><p>Waste collection for shops, offices and other work premises.</p></article>
           <article class="service-card"><h3>Sorting and recovery</h3><p>Separating reusable materials from general waste.</p></article>
         </div>
-        <a class="link-button" href="services.html">Explore services <span aria-hidden="true">&rarr;</span></a>
       </div>
     </section>
   </main>
